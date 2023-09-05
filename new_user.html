@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-image: url('https://i.ibb.co/GRLMg9h/logo.png');
+      background-size: 25%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .navigation {
+      height: 55px;
+      background: linear-gradient(45deg, #4199fe, #74b4fe);
+    }
+    .brand {
+      position: absolute;
+      padding-left: 20px;
+      float: left;
+      line-height: 55px;
+      text-transform: uppercase;
+      font-size: 1.4em;
+    }
+    .brand a, .brand a:visited {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    nav {
+      float: right;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      float: left;
+      position: relative;
+    }
+    nav ul li a, nav ul li a:visited {
+      display: block;
+      padding: 0 20px;
+      line-height: 55px;
+      color: #fff;
+      background: #262626 ;
+      text-decoration: none;
+    }
+    nav ul li a {
+      background: transparent;
+      color: #FFF;
+    }
+    nav ul li a:hover, nav ul li a:visited:hover {
+      background: #2581DC;
+      color: #ffffff;
+    }
+    .navbar-dropdown li a {
+      background: #2581DC;
+    }
+    nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+      padding-left: 4px;
+      content: ' \025BE';
+    }
+    nav ul li ul li {
+      min-width: 190px;
+    }
+    nav ul li ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+    .navbar-dropdown {
+      position: absolute;
+      display: none;
+      z-index: 1;
+      background: #fff;
+      box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+    }
+    /* Mobile navigation */
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      height: 55px;
+      width: 70px;
+    }
+    @media only screen and (max-width: 800px) {
+      .nav-mobile {
+        display: block;
+      }
+      nav {
+        width: 100%;
+        padding: 55px 0 15px;
+      }
+      nav ul {
+        display: none;
+      }
+      nav ul li {
+        float: none;
+      }
+      nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+        background: #262626;
+      }
+      nav ul li ul li a {
+        padding-left: 30px;
+      }
+      .navbar-dropdown {
+        position: static;
+      }
+    }
+    @media screen and (min-width: 800px) {
+      .nav-list {
+        display: block !important;
+      }
+    }
+    #navbar-toggle {
+      position: absolute;
+      left: 18px;
+      top: 15px;
+      cursor: pointer;
+      padding: 10px 35px 16px 0px;
+    }
+    #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 30px;
+      background: #ffffff;
+      position: absolute;
+      display: block;
+      content: '';
+      transition: all 300ms ease-in-out;
+    }
+    #navbar-toggle span:before {
+      top: -10px;
+    }
+    #navbar-toggle span:after {
+      bottom: -10px;
+    }
+    #navbar-toggle.active span {
+      background-color: transparent;
+    }
+    #navbar-toggle.active span:before, #navbar-toggle.active span:after {
+      top: 0;
+    }
+    #navbar-toggle.active span:before {
+      transform: rotate(45deg);
+    }
+    #navbar-toggle.active span:after {
+      transform: rotate(-45deg);
+    
+      
+  </style>
+</head>
+<body>
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Success Academy</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#" id="button0" >Home</a>
+        </li>
+        <li>
+          <a href="#!">Form</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#" id="button1">Admission</a>
+            </li>
+            <li>
+              <a href="#" id="button2">Update Info</a>
+            </li>
+            <li>
+              <a href="#" id="button3">Search Id</a>
+            </li>
+       </ul>
+        </li>
+        <li>
+          <a href="#!">Fee</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#" id="button4">1<sup>st</sup> Year</a>
+            </li>
+            <li>
+              <a href="#" id="button5">2<sup>nd</sup> Year</a>
+            </li>
+            <li>
+              <a href="#" id="button6">3<sup>rd</sup> Year</a>
+            </li>
+          </ul>
+        </li>
+         <li>
+          <a href="#!">Exams</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#" id="button7">Books</a>
+            </li>
+            <li>
+              <a href="#" id="button8">Assignments</a>
+            </li>
+            <li>
+              <a href="#" id="button9">Practicals</a>
+            </li>
+       </ul>
+        </li>
+        <li>
+          <a href="#!">Results</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#" id="button10">Semester-1</a>
+            </li>
+            <li>
+              <a href="#" id="button11">Semester-2</a>
+            </li>
+            <li>
+              <a href="#" id="button12">Semester-3</a>
+            </li>
+            <li>
+              <a href="#" id="button13">Semester-4</a>
+            </li>
+            <li>
+              <a href="#" id="button14">Semester-5</a>
+            </li>
+            <li>
+              <a href="#" id="button15">Semester-6</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Certificates</a>
+          <ul class="navbar-dropdown">
+            <li>
+              <a href="#" id="button16">Original Verification</a>
+            </li>
+            <li>
+              <a href="#" id="button17">Certificate Status</a>
+            </li>
+            <li>
+              <a href="#" id="button18">Course Passing Years</a>
+            </li>
+            <li>
+              <a href="#" id="button19">OD Status</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<div class="content">
+  <iframe id="contentFrame" src="" height="750" width="100%" oncontextmenu="return false;" background="https://i.ibb.co/GRLMg9h/logo.png"></iframe>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var isAuthenticated = false;
+
+  // Function to check authentication on page load
+  function checkAuthentication() {
+    if (!isAuthenticated) {
+      // Redirect to the login page if not authenticated
+      window.location.href = 'index.html';
+    }
+  }
+
+  // Function to handle logout
+  function logout() {
+    isAuthenticated = false;
+    // Redirect to the login page after logout
+    window.location.href = 'index.html';
+  }
+
+  // Check authentication on page load
+  checkAuthentication();
+
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+const button0 = document.getElementById("button0");
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const button3 = document.getElementById("button3");
+  const button4 = document.getElementById("button4");
+  const button5 = document.getElementById("button5");
+  const button6 = document.getElementById("button6");
+  const button7 = document.getElementById("button7");
+  const button8 = document.getElementById("button8");
+  const button9 = document.getElementById("button9");
+  const button10 = document.getElementById("button10");
+  const button11 = document.getElementById("button11");
+  const button12 = document.getElementById("button12");
+  const button13 = document.getElementById("button13");
+  const button14 = document.getElementById("button14");
+  const button15 = document.getElementById("button15");
+  const button16 = document.getElementById("button16");
+  const button17 = document.getElementById("button17");
+  const button18 = document.getElementById("button18");
+  const button19 = document.getElementById("button19");
+  const contentFrame = document.getElementById("contentFrame");
+
+  button1.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbzolGyh34pykL1I8NQH7drq6oph-c5gmd9wmEXfGdc_KImQBYLqFVZnY3dt8FhhFaH8/exec";
+  });
+
+  button2.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbzQP1qa9mh3VMwXD0GxcnSJQshEhGLG4eV9UGbpkrLrL12nmYV8fXH8r-nKQ5pkIipG/exec";
+  });
+
+  button3.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbxkMlQHHAe52WwHBf_RhHxAqYWpJ4bZzTzypSFqVFBrv7SUbnzz4eiq0et_ANUBxGRF/exec";
+  });
+
+  button4.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbzPRgkShJFNitNN-dMk-qLtkX75p2rdIp1HCf-XxZ9-syN1-czwMz_7Sj1RUF6VAeqG/exec";
+  });
+
+  button5.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbztGL4-zIrXXSU-hD8tLkV7loO_jixDd7H0MMnvj3Ws6hSNIdT-eCV2NMQgMIsshaEo/exec";
+  });
+
+  button6.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwxFsg5CSJ3CgNWluQbtHKiwj3KH9kYv9w6sSuzugmD2AJWrS_poOHaRWyKvyg5hUQ3/exec";
+  });
+
+  button7.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbzTrHr53ThTrXzpli4K3j7PEZOUAGNdDf2R5zMe9lesuVA3c6WQxRIrsCjAvcZE8OEv/exec";
+  });
+
+  button8.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbyaWBxGlk3_sZeE2wW-KtENcvOYHfTsRJHnCwOe1GKwNQ8IjAAtHIGg99yVGvelpSnu/exec";
+  });
+
+  button9.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwLPUXuKqyBIk0AtNzJuPj2EKple_dI4m-kZmVO-PmlYMHbwhxNLijeDNRF1yPLJxJq/exec";
+  });
+
+  button10.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbxdWhxCVZjzHkj4BPwsc6e0p0B52FE9ZsSwA_HgLKm_nhkaWcoFmIcPY-BpN2PEcw/exec";
+  });
+
+  button11.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbyk2Ser9p0JJF3NUEWtIV0cils0dIOYu4RsYbP7524oUfMu-NzSt8MdzP5Da7ikfjrq/exec";
+  });
+
+  button12.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbx6B97e3xw4hSaHqaRJvlwbqkyIPgPnL3BAQkGn_wrUqGlEWh8d7s2qXgKIAKw_OEjG/exec";
+  });
+
+  button13.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbyrFJbNxp-GVy7ZaB8zqQ_uAspz7WW-FuMyVeebfnYgurValTpbojznAwNEm2jbflDR/exec";
+  });
+
+  button14.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwmTYN9FbIum436C2zYYxhtpzliKTorLHFTGLo53heu71dOxdc-yKdA31R63yh5hFXq/exec";
+  });
+
+  button15.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbxvQFNdRSt9-_K9C_-H4MiiXf_jqDPJMFWzppADzZAQgCKSpQ9K0jv-rFG5wAmf1f8b/exec";
+  });
+
+  button16.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwbC3MQc8r-vFxoyd6txiGcpSwlwYkvnmG1VwHX315qBpRx6e-UyiuGHL2PP97TkGrg/exec";
+  });
+
+  button17.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwjgVLioeHk5MUji8YQHcpNdiwO6nRWSjXSnv6J4jhwbV-3ANHQYZ-nMPmDbkMx7f-B/exec";
+  });
+
+  button18.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbxoJIWbEpLGOm96c4DS24KABW4occywobkKwleLfldcgREfEneCScv5MEBaRp9SUt9Z/exec";
+  });
+
+  button19.addEventListener("click", function(event) {
+    event.preventDefault();
+    contentFrame.src = "https://script.google.com/macros/s/AKfycbwht7AgSqnWOsjgVZjNl-gUwEb6U4NeIgVsL8LLXlJEI3rc3WSZPWM3NgFr7E9VYZR-/exec";
+  });
+  button0.addEventListener("click", function(event) {
+  event.preventDefault();
+  // Reload the current iframe source (which is the same page)
+  contentFrame.contentWindow.location.reload();
+});
+  
+  (function($) {
+      $(function() {
+
+        //  open and close nav
+        $('#navbar-toggle').click(function() {
+          $('nav ul').slideToggle();
+        });
+
+        // Hamburger toggle
+        $('#navbar-toggle').on('click', function() {
+          this.classList.toggle('active');
+        });
+
+        // If a link has a dropdown, add sub menu toggle.
+        $('nav ul li a:not(:only-child)').click(function(e) {
+          $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+          // Close dropdown when selecting another dropdown
+          $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+          e.stopPropagation();
+        });
+
+        // Click outside the dropdown will remove the dropdown class
+        $('html').click(function() {
+          $('.navbar-dropdown').hide();
+        });
+      });
+    })(jQuery);
+
+var logoutTimeout = 10000; // 5 minutes
+  var idleTimeout = 20000; // 10 minutes
+
+  var lastActivityTime = new Date().getTime();
+  var timeout;
+  
+  // Function to reset the timeout
+  function resetTimeout() {
+    clearTimeout(timeout);
+    lastActivityTime = new Date().getTime();
+    startTimeout();
+  }
+
+  // Function to handle logout
+  function logout() {
+    // Redirect to the login page or perform other logout actions
+    window.location.href = "file:///C:/Users/Sekhar/Desktop/student/index.html"; // Change this to your login page URL
+  }
+
+  // Function to start the timeout
+  function startTimeout() {
+    timeout = setTimeout(function() {
+      logout();
+    }, idleTimeout);
+  }
+
+  // Handle user activity
+  $(document).on("mousemove keydown click", function() {
+    resetTimeout();
+  });
+
+  // Initial start of the timeout
+  startTimeout();
+
+</script>
+</body>
+</html>
